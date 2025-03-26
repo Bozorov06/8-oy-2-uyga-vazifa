@@ -2,11 +2,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Heart, ShoppingCart } from "lucide-react";
+import { Heart, Instagram, ShoppingCart, Youtube } from "lucide-react";
 import Image from "next/image";
 import { useCart } from "@/app/cart/CartContext";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Link from "next/link";
 
 const ProductCard = ({ p }) => {
   const { addToCart } = useCart();
@@ -50,15 +51,23 @@ const ProductCard = ({ p }) => {
           <div className="bg-white p-6 rounded-lg shadow-lg text-center">
             <h2 className="text-xl font-bold">Follow Us on Social Media!</h2>
             <p className="text-gray-600 mt-2">Stay connected with us.</p>
-            <a href="#" className="text-blue-500 text-xl">
-              🔴 Instagram
-            </a>
-            <a href="#" className="text-red-500 text-xl">
-              🔴 YouTube
-            </a>
-            <a href="#" className="text-blue-400 text-xl">
-              🔷 Telegram
-            </a>
+            <div className="flex gap-2 items-center justify-center">
+              <Link
+                href="https://www.instagram.com/"
+                className="text-blue-500 text-xl"
+              >
+                <Instagram />
+              </Link>
+              <Link
+                href="https://www.youtube.com/"
+                className="text-red-500 text-xl"
+              >
+                <Youtube />
+              </Link>
+              <Link href="#" className="text-blue-400 text-xl">
+                Telegram
+              </Link>
+            </div>
             <button
               onClick={closeModal}
               className="mt-4 bg-blue-500 text-white px-4 py-2 rounded block mx-auto cursor-pointer"

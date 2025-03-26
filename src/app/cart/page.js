@@ -42,7 +42,10 @@ const CartPage = () => {
               <div className="flex-1">
                 <h3 className="font-semibold text-lg">{item.title}</h3>
                 <p className="text-sm text-gray-500">{item.description}</p>
-                <p className="text-sm text-gray-500"> ${item.price}</p>
+                <p className="text-sm text-gray-500 line-through">
+                  {" "}
+                  ${item.price}
+                </p>
                 <p className="text-green-500 font-bold">
                   $
                   {(
@@ -72,7 +75,9 @@ const CartPage = () => {
           Xarid qilish
         </button>
       </div>
-      <Link href={"/"} className=" text-30">Xarid qilish</Link>
+      <Link href={"/"} className="font-semibold text-blue-600 text-30">
+        Yana xarid qilish
+      </Link>
     </div>
   );
 };
