@@ -103,7 +103,6 @@ const ProductCard = ({ p }) => {
           className="flex items-center cursor-pointer gap-2 bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition"
         >
           <ShoppingCart size={16} />
-          {/* <span className="hidden sm:inline">Savatga</span> */}
         </button>
       </div>
     </div>
