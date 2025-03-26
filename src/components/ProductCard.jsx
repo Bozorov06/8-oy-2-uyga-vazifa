@@ -35,7 +35,7 @@ const ProductCard = ({ p }) => {
     addToCart(p);
     toast.success("Mahsulot savatga qo‘shildi! ✅", {
       position: "top-right",
-      autoClose: 3000,
+      autoClose: 10000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
